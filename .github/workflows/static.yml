@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareNet - Bridging the Future of Healthcare</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa 0%, #bbdefb 100%); /* Softer, dynamic gradient */
+            color: #2c3e50; /* Darker text for better contrast */
+            text-align: center;
+            overflow: hidden; /* Hide any overflow from animations */
+        }
+
+        .container {
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+            max-width: 700px;
+            width: 90%;
+            position: relative;
+            z-index: 2; /* Ensure content is above background elements */
+            animation: fadeInScale 1s ease-out forwards;
+        }
+
+        h1 {
+            color: #007bff; /* CareNet primary blue */
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: slideInTop 1s ease-out forwards;
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            animation: slideInBottom 1s ease-out forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .cta-text {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #3498db; /* A slightly different blue for emphasis */
+            animation: slideInBottom 1s ease-out forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        /* Subtle background animation */
+        .background-blob {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #a7d9ff; /* Lighter blue for blobs */
+            border-radius: 50%;
+            opacity: 0.3;
+            filter: blur(50px);
+            animation: moveBlob 15s infinite alternate ease-in-out;
+            z-index: 1;
+        }
+
+        .blob-1 { top: 10%; left: 15%; animation-delay: 0s; }
+        .blob-2 { bottom: 20%; right: 10%; width: 250px; height: 250px; background-color: #87ceeb; animation-delay: 3s; }
+        .blob-3 { top: 30%; right: 25%; width: 180px; height: 180px; background-color: #92e0ff; animation-delay: 6s; }
+
+        /* Keyframe Animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideInTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInBottom {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes moveBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(50px, -30px) scale(1.1); }
+            50% { transform: translate(0, 50px) scale(0.9); }
+            75% { transform: translate(-40px, -20px) scale(1.2); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blob blob-1"></div>
+    <div class="background-blob blob-2"></div>
+    <div class="background-blob blob-3"></div>
+
+    <div class="container">
+        <h1>CareNet</h1>
+        <p>A new era of healthcare connection is about to begin.</p>
+        <p>We're meticulously crafting a platform to empower healthcare professionals across India – connecting opportunities, fostering community, and driving growth.</p>
+        <p class="cta-text">Get ready to elevate your career. CareNet is launching soon!</p>
+    </div>
+</body>
+</html>
